@@ -1,9 +1,23 @@
-import React from 'react'
+import React from "react";
+import HomeStyles from "./styles/homeStyles";
+
+import DataFunc from "./DataContext";
+import Main from "./Main";
+import Quiz from "./Quiz";
+import End from "./End";
 
 const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+  const { gameState, setGameState } = DataFunc();
 
-export default Home
+  return (
+    <HomeStyles>
+      <div className="content">
+        {gameState === "main" && <Main />}
+        {gameState === "quiz" && <Quiz />}
+        {gameState === "end" && <End />}
+      </div>
+    </HomeStyles>
+  );
+};
+
+export default Home;
