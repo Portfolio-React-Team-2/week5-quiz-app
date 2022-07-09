@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const NavBarStyles = styled.nav`
   width: 100%;
-  background-color: #218380;
+  background-color: var(--bg-dark);
   padding: 25px;
   /* padding: 10px; */
   color: #fff;

@@ -5,12 +5,14 @@ import DataFunc from "./DataContext";
 
 const NavBar = () => {
   let timer = "19";
-  const { gameState, setGameState } = DataFunc();
+  const { setGameState } = DataFunc();
 
   return (
     <NavBarStyles>
       <div className="all-score">
-        View Highscores <FaHandPointLeft className="hand" size={20} />{" "}
+        <p onClick={() => setGameState("scores")}>
+          View Highscores <FaHandPointLeft className="hand" size={20} />{" "}
+        </p>
       </div>
       <div>Time: {timer} </div>
     </NavBarStyles>

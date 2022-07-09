@@ -5,9 +5,10 @@ import DataFunc from "./DataContext";
 import Main from "./Main";
 import Quiz from "./Quiz";
 import End from "./End";
+import Scores from "./Scores";
 
 const Home = () => {
-  const { gameState, setGameState } = DataFunc();
+  const { gameState } = DataFunc();
 
   return (
     <HomeStyles>
@@ -15,6 +16,7 @@ const Home = () => {
         {gameState === "main" && <Main />}
         {gameState === "quiz" && <Quiz />}
         {gameState === "end" && <End />}
+        {gameState === "scores" && <Scores />}
       </div>
     </HomeStyles>
   );
