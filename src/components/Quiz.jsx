@@ -27,7 +27,6 @@ const Quiz = () => {
         <button onClick={() => setChosen("B")}>{QUESTIONS[index].opt2}</button>
         <button onClick={() => setChosen("C")}>{QUESTIONS[index].opt3}</button>
         <button onClick={() => setChosen("D")}>{QUESTIONS[index].opt4}</button>
-        <h1>{score}</h1>
       </div>
       <div>
         {index <= 8 && <button onClick={nextPage}>Next </button>}
